@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nyakwit Design System — Sage & Cream palette
+   All colors in HSL. Tokens consumed via tailwind semantic classes. */
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 38 33% 94%;          /* cream #f5f0e8 */
+    --foreground: 140 14% 18%;         /* deep sage ink */
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 14% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 14% 18%;
+
+    /* Brand */
+    --primary: 105 14% 53%;            /* sage #7d9b76 -> we deepen it slightly */
+    --primary-foreground: 38 33% 97%;
+    --primary-deep: 138 22% 28%;       /* darker forest sage */
+    --primary-glow: 105 24% 70%;       /* light sage glow */
+
+    --secondary: 95 17% 76%;           /* sage light #a8c0a0 */
+    --secondary-foreground: 140 20% 16%;
+
+    --muted: 90 18% 86%;               /* dce5d4 */
+    --muted-foreground: 140 8% 38%;
+
+    --accent: 38 40% 88%;              /* warm cream accent */
+    --accent-foreground: 140 20% 16%;
+
+    --destructive: 6 65% 48%;
+    --destructive-foreground: 38 33% 97%;
+
+    --warning: 35 85% 50%;
+    --success: 138 38% 38%;
+
+    --border: 90 14% 80%;
+    --input: 90 14% 82%;
+    --ring: 105 24% 45%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(138 22% 28%) 0%, hsl(105 18% 42%) 60%, hsl(95 22% 60%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(38 33% 96%) 0%, hsl(90 18% 88%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(38 33% 96%) 100%);
+    --gradient-leaf: linear-gradient(135deg, hsl(105 24% 70%) 0%, hsl(138 22% 38%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(140 20% 16% / 0.12);
+    --shadow-elegant: 0 20px 50px -20px hsl(138 22% 28% / 0.25);
+    --shadow-glow: 0 0 40px hsl(105 24% 70% / 0.45);
+
+    /* Motion */
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dark {
+    --background: 140 18% 8%;
+    --foreground: 38 33% 94%;
+    --card: 140 16% 11%;
+    --card-foreground: 38 33% 94%;
+    --popover: 140 16% 11%;
+    --popover-foreground: 38 33% 94%;
+    --primary: 105 24% 60%;
+    --primary-foreground: 140 20% 10%;
+    --primary-deep: 105 18% 42%;
+    --primary-glow: 105 30% 50%;
+    --secondary: 140 14% 22%;
+    --secondary-foreground: 38 33% 94%;
+    --muted: 140 12% 18%;
+    --muted-foreground: 90 10% 70%;
+    --accent: 140 14% 22%;
+    --accent-foreground: 38 33% 94%;
+    --destructive: 6 60% 45%;
+    --destructive-foreground: 38 33% 94%;
+    --border: 140 12% 22%;
+    --input: 140 12% 22%;
+    --ring: 105 24% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-soft { background: var(--gradient-soft); }
+  .gradient-card { background: var(--gradient-card); }
+  .gradient-leaf { background: var(--gradient-leaf); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .text-balance { text-wrap: balance; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scan-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fade-up { animation: fade-up 0.7s var(--transition-smooth) both; }
+.animate-scan-pulse { animation: scan-pulse 2s ease-in-out infinite; }
