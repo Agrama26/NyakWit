@@ -10,7 +10,7 @@ type NavItem = { to: string; label: string; icon: typeof Home; show: "always" | 
 
 const allNavItems: NavItem[] = [
   { to: "/", label: "Beranda", icon: Home, show: "always" },
-  { to: "/scan", label: "Scan", icon: Camera, show: "always" },
+  { to: "/scan", label: "Klasifikasi", icon: Camera, show: "always" },
   { to: "/history", label: "Riwayat", icon: HistoryIcon, show: "auth" },
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, show: "admin" },
   { to: "/profile", label: "Profil", icon: User, show: "auth" },
@@ -128,7 +128,7 @@ export const Header = () => {
               </Button>
             )}
             <Button asChild variant="hero" size="sm">
-              <Link to="/scan">Mulai Scan</Link>
+              <Link to="/scan">Mulai Analisa</Link>
             </Button>
           </div>
 

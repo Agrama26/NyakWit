@@ -28,15 +28,15 @@ const Index = () => {
               <span className="text-primary-deep">dalam hitungan detik.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl text-balance">
-              Nyakwit mengenali 5 kondisi daun kelapa sawit — sehat, kekeringan,
-              jamur, kekurangan magnesium, dan kutu perisai — langsung dari
+              Nyakwit mengenali 5 kondisi daun kelapa sawit — sehat, kering,
+              jamur atau bercak, kekurangan magnesium atau kuning, dan kutu perisai — langsung dari
               foto kebunmu.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="hero" size="lg">
                 <Link to="/scan">
                   <Camera className="h-5 w-5" />
-                  Scan Daun Sekarang
+                  Analisa Daun Sekarang
                 </Link>
               </Button>
               <Button asChild variant="soft" size="lg">
@@ -79,9 +79,9 @@ const Index = () => {
               </div>
               <div className="mt-2 text-xs text-muted-foreground">Confidence</div>
               <div className="mt-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-success animate-scan-pulse w-[92%]" />
+                <div className="h-full bg-success animate-scan-pulse w-[91%]" />
               </div>
-              <div className="mt-1 text-xs font-semibold">92%</div>
+              <div className="mt-1 text-xs font-semibold">91%</div>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ const Index = () => {
             <Button asChild variant="soft" size="lg" className="mt-8">
               <Link to="/scan">
                 <Camera className="h-5 w-5" />
-                Mulai Scan Gratis
+                Mulai Analisa Gratis
               </Link>
             </Button>
           </div>
