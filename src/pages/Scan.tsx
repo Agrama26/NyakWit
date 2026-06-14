@@ -241,7 +241,7 @@ const Scan = () => {
           {/* ── Header ─────────────────────────────────────────────── */}
           <div className="text-center mb-8 animate-fade-up">
             <div className="inline-block px-3 py-1 rounded-full bg-accent text-xs font-semibold mb-4">
-              SCAN DAUN
+              ANALISA DAUN
             </div>
             <h1 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
               Unggah foto daun untuk dianalisa
@@ -468,7 +468,7 @@ const Scan = () => {
                   <div className="flex flex-wrap gap-3 pt-1">
                     <Button onClick={reset} variant="soft">
                       <RefreshCcw className="h-4 w-4" />
-                      Scan Lagi
+                      Analisa Lagi
                     </Button>
                     <Button asChild variant="hero">
                       <Link to="/ensiklopedia">Pelajari Selengkapnya</Link>
